@@ -12,5 +12,5 @@ object ServerConfig {
   def serverConfig[F[_]: Async]: ConfigValue[F,ServerConfig] = (
     env("PORT").as[Int].default(8080),
     env("HOST").default("localhost")
-  ).parMapN((port,host) => ServerConfig(Port(port),Host(host)) )
+  ).parMapN((port,host) => ServerConfig(Port(port),Host(host)))
 }

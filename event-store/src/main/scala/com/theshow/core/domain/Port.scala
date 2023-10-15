@@ -1,3 +1,3 @@
 package com.theshow.core.domain
 
-final case class Port(port: Int) extends AnyVal
+final case class Port(value: Int) extends AnyVal
